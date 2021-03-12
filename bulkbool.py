@@ -132,7 +132,7 @@ class BULKBOOL_PT_panel(bpy.types.Panel):
         row = layout.row()
         row.operator('object.bulkbool_auto_union')
 
-class Auto_Boolean:
+class Bulk_Auto_Boolean:
 
     def objects_prepare(self):
         objects = bpy.context.selected_objects
@@ -265,7 +265,7 @@ class Auto_Boolean:
 
         return self.execute(context)
     
-class OBJECT_OT_bulkbool_Auto_Union(bpy.types.Operator, Auto_Boolean):
+class OBJECT_OT_bulkbool_Auto_Union(bpy.types.Operator, Bulk_Auto_Boolean):
     bl_idname = "object.bulkbool_auto_union"
     bl_label = "Union Selected Objects"
     bl_description = "Combine selected objects"
